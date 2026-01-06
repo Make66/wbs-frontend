@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Externes JavaScript-File laden, defer = nach HTML-Parsing ausführen -->
+    <script src="script.js" defer></script>
+    <title>JS Intro</title>
+  </head>
+
+  <body>
+    <h1 onclick="greet('Ralf')">Hello, there</h1>
+
+    <!-- Inline JavaScript direkt im HTML -->
+    <script>
+
+      // Berechnung wird durchgeführt, aber Ergebnis nicht ausgegeben
+      42 + 52
+
+      // console.log() gibt das Ergebnis in der Browser-Konsole aus
+      console.log(42 + 45)
+
+    </script>
+
+
+    <!-- Alternative: Script am Ende des Body (ohne defer) -->
+    <!-- <script src="script.js"></script> -->
+  </body>
+
+</html>
