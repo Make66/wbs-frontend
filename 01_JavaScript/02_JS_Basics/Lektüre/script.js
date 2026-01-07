@@ -99,7 +99,7 @@
 
 // // Außerhalb des Blocks: globale Variable wird ausgegeben
 // console.log(insider); // Zeigt 'Global'
-let day = 'Donnerstag';
+let day = "Donnerstag";
 
 // Alternative zu vielen if-else-if Bedingungen:
 // if (day === 'Montag') {
@@ -110,15 +110,15 @@ let day = 'Donnerstag';
 
 // switch-Statement: Vergleicht einen Wert mit mehreren cases
 switch (day) {
-  case 'Montag':
-    console.log('Wochenende vorbei');
+  case "Montag":
+    console.log("Wochenende vorbei");
     break; // Beendet den switch, sonst "fall-through"
-  case 'Dienstag':
-    console.log('Dienst am Dienstag');
+  case "Dienstag":
+    console.log("Dienst am Dienstag");
     break;
-  case 'Mittwoch':
-  case 'Donnerstag': // Fall-through: Beide cases führen denselben Code aus
-    console.log('Einfache Arbeitstage');
+  case "Mittwoch":
+  case "Donnerstag": // Fall-through: Beide cases führen denselben Code aus
+    console.log("Einfache Arbeitstage");
 }
 
 let temperature = -3;
@@ -126,33 +126,33 @@ let temperature = -3;
 // switch mit true: Ermöglicht Bedingungen statt fester Werte
 switch (true) {
   case temperature < 0:
-    console.log('Brr');
+    console.log("Brr");
     break;
   case temperature < 5:
-    console.log('Zieh eine Jacke an');
+    console.log("Zieh eine Jacke an");
 }
 
 // Funktionsaufrufe vor der Deklaration möglich (siehe Hoisting unten)
-greet('Fawzi');
-greet('Dominik');
-greet('Davide');
-greet('Thomas');
+greet("Fawzi");
+greet("Dominik");
+greet("Davide");
+greet("Thomas");
 
 // Hoisting: function-Deklarationen werden nach oben "gehisst"
 function greet(name) {
-  console.log('Hallo ' + name);
+  console.log("Hallo " + name);
 }
 
 // Arrow Function (Pfeilfunktion): Moderne, kompakte Syntax
 // Bei Einzeilern knnen Klammern {} und return weggelassen werden
-const greetArr = () => console.log('Hallo Welt aus der Arrow Funktion!');
+const greetArr = () => console.log("Hallo Welt aus der Arrow Funktion!");
 
 greetArr();
 
 // Funktion mit Rückgabewert und Fehlerbehandlung
 function safeDivide(a, b) {
   if (b === 0) {
-    throw new Error('Division by zero'); // Wirft einen Fehler
+    throw new Error("Division by zero"); // Wirft einen Fehler
   }
   let res = a / b;
   return res; // Gibt das Ergebnis zurück
@@ -163,19 +163,19 @@ try {
   const result = safeDivide(10, 0); // Versuche diesen Code
   console.log(result);
 } catch (error) {
-  console.log('Dividiere nicht durch null'); // Wird bei Fehler ausgeführt
+  console.log("Dividiere nicht durch null"); // Wird bei Fehler ausgeführt
 }
 
 try {
   console.log(gibtEsNicht); // Undefinierte Variable
 } catch {
-  console.log('Fehler ist aufgetreten');
+  console.log("Fehler ist aufgetreten");
 }
 
 // while-Schleife: Wiederholt Code, solange Bedingung wahr ist
 let counter = 0;
 while (counter < 10) {
-  console.log('Eine neuer Runde: ', counter);
+  console.log("Eine neuer Runde: ", counter);
   // counter = counter + 1; // Langform
   // counter += 1; // Kurzform
   counter++; // Inkrement-Operator (kürzeste Form)
@@ -208,8 +208,8 @@ for (let i = -5; i < 5; i++) {
     const res = safeDivide(10, i);
     console.log(res);
   } catch {
-    alert('Dividiere nicht durch 0!'); // Zeigt Browser-Alert, Seite friert ein
-    console.log('Ein Fehler ist aufgetreten');
+    alert("Dividiere nicht durch 0!"); // Zeigt Browser-Alert, Seite friert ein
+    console.log("Ein Fehler ist aufgetreten");
     continue; // Macht mit nächster Iteration weiter
   }
 }
