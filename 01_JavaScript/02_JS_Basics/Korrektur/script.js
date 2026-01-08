@@ -7,7 +7,7 @@
   - const: für Werte, die sich nicht ändern (Konstanten)
   - var: die ältere Methode (sollte vermieden werden)
 */
-console.log("--- 1. VARIABLEN ---");
+console.log("--- Variablen ---");
 
 // 1. Variablen mit let und const deklarieren:
 let age = 25;
@@ -46,7 +46,7 @@ console.log("Geänderte Lieblingsfarbe:", favoriteColor); // Zeigt nun "green"
   
   Vorsicht beim Mischen von Zahlen und Strings!
 */
-console.log("\n --- 2. ARITHMETIK ---");
+console.log("\n --- Arithmetik ---");
 
 // 1. Addition mit gemischten Typen
 let num = 5;
@@ -112,7 +112,7 @@ console.log("Modulo von Zahlen (10 % 8):", remainder); // Erwartet: 2
   >=   (größer oder gleich)
   <=   (kleiner oder gleich)
 */
-console.log("\n --- 3. VERGLEICHE ---");
+console.log("\n --- Vergleiche ---");
 
 // Strikte vs. einfache Gleichheit und Ungleichheit
 console.log('5 == "5": ', 5 == "5"); // Einfache Gleichheit, sollte true sein
@@ -148,7 +148,7 @@ console.log("0 === false: ", 0 === false); // False, keine Typumwandlung und unt
   - if/else Statements für einfache Bedingungen
   - switch Statements für mehrere spezifische Fälle
 */
-console.log("\n --- 4. BEDINGUNGEN ---");
+console.log("\n --- Bedingungen ---");
 
 // Aktuelle Temperatur in Grad Celsius
 const temperature = 30; // Ändere diesen Wert für andere Ergebnisse
@@ -199,7 +199,7 @@ switch (true) {
   - while loop (wenn man nicht genau weiß, wie oft)
   - do-while loop (läuft mindestens einmal)
 */
-console.log("\n --- 5. SCHLEIFEN ---");
+console.log("\n --- Schleifen ---");
 
 const animals = ["monkey", "lion", "tiger", "bear", "giraffe", "zebra"];
 
@@ -255,7 +255,7 @@ console.log(`Zähler bis zum ersten 'm': ${count}`);
   2. Function Expression (Funktions-Ausdruck)
   3. Arrow Function (Pfeil-Funktion)
 */
-console.log("\n --- 6. FUNKTIONEN ---");
+console.log("\n --- Funktionen ---");
 
 // Teil 1: Function Declarations
 console.log("Funktionsdeklaration:");
@@ -400,7 +400,7 @@ Diskussion:
   'var' hat einen Function-Scope
   'let' und 'const' haben einen Block-Scope
 */
-console.log("\n --- 7. SCOPE ---");
+console.log("\n --- Scope ---");
 
 // 1. GLOBAL SCOPE
 // Diese Variable ist überall im Skript verfügbar.
