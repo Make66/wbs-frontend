@@ -8,9 +8,9 @@ console.log(document);
 console.log(document.body);
 console.log(document.firstChild);
 
-/*==========================================================================
+/*==========================================================
  * ABSCHNITT 2: ELEMENTE AUSWÄHLEN
- *==========================================================================*/
+ *==========================================================*/
 
 // 2.1 Verwendung von querySelector (gibt das erste passende Element zurück)
 console.dir(document.querySelector("body"));
@@ -45,9 +45,9 @@ console.log(allDivs);
 // - Besitzt eine length-Eigenschaft
 // - Die forEach()-Methode kann verwendet werden
 
-/*==========================================================================
+/*==========================================================
  * ABSCHNITT 3: ELEMENTE IN VARIABLEN SPEICHERN
- *==========================================================================*/
+ *==========================================================*/
 
 // Bewährte Methode (Best Practice): Speichere Elemente, die du mehrfach verwendest, in Variablen
 
@@ -56,9 +56,9 @@ const mainParagraph = document.getElementById("main-paragraph");
 const outerContainer = document.getElementById("outer-container");
 const innerContainer = document.getElementById("inner-container");
 
-/*==========================================================================
+/*==========================================================
  * ABSCHNITT 4: ZUGRIFF AUF ELEMENT-INHALTE
- *==========================================================================*/
+ *==========================================================*/
 
 const h1 = document.getElementById("main-heading");
 
@@ -67,9 +67,9 @@ console.log(h1.innerText); // Nur sichtbarer Textinhalt (berücksichtigt CSS-Sty
 console.log(h1.textContent); // Gesamter Textinhalt ungeachtet der Sichtbarkeit
 console.log(h1.innerHTML); // HTML-Inhalt inklusive Tags (Sicherheitsrisiko bei Benutzereingaben!)
 
-/*==========================================================================
+/*==========================================================
  * ABSCHNITT 5: ELEMENTE MODIFIZIEREN
- *==========================================================================*/
+ *==========================================================*/
 
 // 5.1 Textinhalt ändern
 h1.innerText = "DOM Manipulation macht Spaß!";
@@ -104,9 +104,9 @@ clickButton.addEventListener("click", () => {
   alert("Hallo!");
 });
 
-/*==========================================================================
+/*==========================================================
  * ABSCHNITT 6: ELEMENTE ERSTELLEN UND ANHÄNGEN
- *==========================================================================*/
+ *==========================================================*/
 
 // Ein neues Absatzelement (p) erstellen
 const newParagraph = document.createElement("p");
@@ -123,9 +123,9 @@ outerContainer.appendChild(newParagraph);
 // outerContainer.insertBefore(newParagraph, innerContainer);
 // outerContainer.prepend(newParagraph);
 
-/*==========================================================================
+/*==========================================================
  * ABSCHNITT 7: EVENT-HANDLING (EREIGNISVERARBEITUNG)
- *==========================================================================*/
+ *==========================================================*/
 // Mehrere Möglichkeiten, Event-Listener hinzuzufügen:
 
 // Methode 1: addEventListener (bevorzugt – erlaubt mehrere Listener)
@@ -140,9 +140,9 @@ clickButton.addEventListener("mouseout", () => {
 // Methode 2: onclick-Eigenschaft (erlaubt nur einen Listener)
 // clickButton.onclick = () => alert("Button geklickt!");
 
-/*==========================================================================
+/*==========================================================
  * ABSCHNITT 8: BONUS
- *==========================================================================*/
+ *==========================================================*/
 
 // Beispiel für NodeList vs HTMLCollection
 
