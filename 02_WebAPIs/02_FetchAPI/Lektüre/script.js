@@ -11,16 +11,18 @@
 // Dies ist die traditionelle Art, Promises mit .then()-Ketten zu handhaben.
 
 const fetchFunction = () => {
-  fetch("https://jsonplaceholder.typicode.com/posts/1")
+  fetch("https://jsonplaceholder.typicode.com/posts/1") // Gibt ein Promise zurück, das zu einem Response-Objekt aufgelöst wird
     .then((response) => {
+      // Das erste .then() verarbeitet das Response-Objekt
       if (!response.ok) {
+        // Überprüfe immer, ob die Antwort OK ist (Status 200-299)
         throw new Error(`Etwas ist schiefgelaufen. Status: ${response.status}`);
       } else {
-        return response.json();
+        return response.json(); // JSON-Antwort parsen - dies gibt ein weiteres Promise zurück!
       }
     })
-    .then((data) => console.log(data))
-    .catch((error) => console.error(error));
+    .then((data) => console.log(data)) // Das zweite .then() verarbeitet die geparsten JSON-Daten
+    .catch((error) => console.error(error)); // Fangt alle Fehler in der Promise-Kette ab
 };
 
 fetchFunction();
@@ -30,7 +32,9 @@ fetchFunction();
 // Sie lässt asynchronen Code eher wie synchronen Code aussehen.
 
 const fetchFunctionAsyncAwait = async () => {
+  // try/catch wird zur Fehlerbehandlung bei async/await verwendet
   try {
+    // await pausiert die Ausführung, bis das Promise aufgelöst ist
     const response = await fetch(
       "https://jsonplaceholder.typicode.com/posts/1"
     );
@@ -39,8 +43,10 @@ const fetchFunctionAsyncAwait = async () => {
       throw new Error(`Etwas ist schiefgelaufen. Status: ${response.status}`);
     }
 
+    // Erneut await verwenden, um die JSON-Antwort zu parsen
     const data = await response.json();
 
+    // WICHTIG: async/await ist nur "Syntactic Sugar" (eine schönere/alternative Schreibweise zu .then/.catch)
     console.log(data);
   } catch (error) {
     console.error(error);
